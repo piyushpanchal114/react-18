@@ -2,21 +2,24 @@ import { useState } from "react";
 import Like from "./components/Like";
 
 function App() {
-  const [game, setGame] = useState({
-    id: 1,
-    player: { name: "John" },
+  const [pizza, setPizza] = useState({
+    name: "Spicy Pepperoni",
+    toppings: ["Mushroom"],
   });
 
   const handleChange = () => {
-    setGame({ ...game, player: { ...game.player, name: "bob" } });
+    setPizza({
+      ...pizza,
+      toppings: [...pizza.toppings, "Cheese"],
+    });
   };
 
   return (
     <>
       <p>
-        {game.id} {game.player.name}
+        {pizza.name} {pizza.toppings}
       </p>
-      <button onClick={handleChange}>Change</button>
+      <button onClick={handleChange}>Add Topping</button>
     </>
   );
 }
