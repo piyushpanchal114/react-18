@@ -5,6 +5,21 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "./App.tsx";
 import "bootstrap/dist/css/bootstrap.css";
 
+// Global settings for query client
+
+// const queryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       retry: 3,
+//       cacheTime: 300_000, //5m
+//       staleTime: 10 * 1000, //10s
+//       refetchOnWindowFocus: false,
+//       refetchOnReconnect: false,
+//       refetchOnMount: false,
+//     },
+//   },
+// });
+
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
