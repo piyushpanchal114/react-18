@@ -3,9 +3,15 @@ import Like from "./components/Like";
 import ExpandableText from "./components/ExpandableText";
 import TodoList from "./components/TodoList";
 import PostList from "./components/PostList";
+import TodoForm from "./components/TodoForm";
 
 function App() {
-  return <PostList />;
+  return (
+    <>
+      <TodoForm />
+      <TodoList />
+    </>
+  );
 }
 
 export default App;
